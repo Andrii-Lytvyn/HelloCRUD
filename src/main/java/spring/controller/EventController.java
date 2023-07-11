@@ -50,7 +50,7 @@ public class EventController {
 
     @GetMapping("/cities")
     public String findAllCityForm(Model model) {
-        model.addAttribute("events", eventService.findAll());
+        model.addAttribute("cities", eventService.findAllCities());
         return "cities";
     }
 //    @RequestMapping(value = "/cities", method = RequestMethod.GET)

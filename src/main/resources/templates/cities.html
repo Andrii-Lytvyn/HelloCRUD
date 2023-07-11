@@ -9,11 +9,20 @@
 
 <table border="1">
     <tr>
-        <th>City</th>
+        <th>City with method find all</th>
     </tr>
 
-        <td th:utext="${cities}">...</td>
+    <tr th:each="event : ${events}">
+        <td th:utext="${event.city}">...</td>
     </tr>
+
+    <tr>
+        <th>City with method find all Cities</th>
+
+        <td th:utext="${cities}">...</td>
+
+    </tr>
+
 
 </table>
 </body>

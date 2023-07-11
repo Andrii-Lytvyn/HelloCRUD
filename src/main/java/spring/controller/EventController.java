@@ -48,17 +48,18 @@ public class EventController {
         return "add";
     }
 
-    @GetMapping("/cities")
-    public String findAllCityForm(Model model) {
-        model.addAttribute("cities", eventService.findAllCities());
-        return "cities";
-    }
-//    @RequestMapping(value = "/cities", method = RequestMethod.GET)
-//    public String getCitiesForm(Model model) {
-//        Event event = new Event();
-//        model.addAttribute("cities", event.getCity());
+//    @GetMapping("/cities")
+//    public String findAllCityFormMethod(Model model) {
+//        model.addAttribute("cities", eventService.findAllCities());
 //        return "cities";
 //    }
+
+    @GetMapping("/cities")
+    public String findAllCityFormFindAll(Model model) {
+        model.addAttribute("events", eventService.findAll());
+        return "cities";
+    }
+
 
 
 
